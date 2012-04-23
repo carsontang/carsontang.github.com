@@ -20,7 +20,7 @@ With RVM, you can have MULTIPLE versions of Ruby/Rails.
 ###How to install Ruby 1.9.2 on your computer
     rvm install 1.9.2
 
-###How to create a new gemset named "blog" for Ruby 1.9.2
+###How to create and use a new gemset named "blog" for Ruby 1.9.2
     rvm --create use 1.9.2@blog
 
 ###How to list all the gemsets managed by RVM
