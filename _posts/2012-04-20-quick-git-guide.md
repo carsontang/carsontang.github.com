@@ -1,19 +1,16 @@
 ---
 layout: post
 title: Quick Git Guide
-tagline: Hello
 category: git
 tags: [git, tutorial, version control]
 ---
 {% include JB/setup %}
 
-## What is Git?
+### What is Git?
 Git is a distributed version control system.
 <br />
 <br />
-<br />
-## Common Git commands
-<br />
+### Common Git commands
 **git init** -- creates a Git repository in the current directory
 
 **git add .** -- adds all files in the current directory to the Git repository
@@ -21,9 +18,7 @@ Git is a distributed version control system.
 **git commit** -- commits current files to the Git repository
 <br />
 <br />
-<br />
-# Common workflow
-<br />
+### Common workflow
 Let's go through an example workflow to see how the commands listed above are used:
 
     $ cd ~
