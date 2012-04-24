@@ -29,7 +29,7 @@ author :
 production_url : http://username.github.com
 
 # Github Pages production mode
-safe : true
+# safe : true
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
