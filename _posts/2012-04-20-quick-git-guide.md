@@ -27,7 +27,7 @@ Let's go through an example workflow to see how the commands listed above are us
     $ git init
     Initialized empty Git repository in /Users/ken/kinect_code/.git/
 
-All I've done so far is 1) create a directory `~/kinect_code` and 2) initialized a Git
+All I've done so far is 1) create a directory `~/kinect_code` and 2) initialize a Git
 repository within `~/kinect_code`.
 
     $ echo "This is the README" > README
