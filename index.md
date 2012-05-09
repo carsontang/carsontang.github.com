@@ -2,7 +2,9 @@
 layout: page
 ---
 {% include JB/setup %}
-    
+
+Guides written mainly for myself, but I hope they help you out, too.
+
 ### Posts
 
 <ul class="posts">
