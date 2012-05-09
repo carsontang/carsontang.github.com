@@ -11,8 +11,8 @@ RVM stands for Ruby Version Manager.
 
 ####Why use RVM?
 When you start making a ton of websites with Ruby and Rails, you'll have a lot
-of versions of Ruby and Rails. For example, your dboat website might have been
-built with Ruby 1.9.2/Rails 3.2.0. Your frat's website might have been built
+of versions of Ruby and Rails. For example, your honor society's website might have been
+built with Ruby 1.9.2/Rails 3.2.0. Your club sports team's website might have been built
 with Ruby 1.9.1/Rails 3.1.0. If you don't have RVM on your computer, you can
 only have ONE version of Ruby and ONE version of Rails on your computer.
 With RVM, you can have MULTIPLE versions of Ruby/Rails.
