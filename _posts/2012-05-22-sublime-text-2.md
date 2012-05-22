@@ -13,4 +13,4 @@ tags: [tutorial]
 
 To unfold all code, select all and use the code unfold keys.
 
-Great link: https://gist.github.com/1736542
+[More useful keys](https://gist.github.com/1736542)
