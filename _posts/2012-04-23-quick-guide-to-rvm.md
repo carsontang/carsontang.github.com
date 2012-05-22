@@ -28,3 +28,9 @@ With RVM, you can have MULTIPLE versions of Ruby/Rails.
 
 ####How to list all the versions of Ruby managed by RVM
     rvm list
+
+####How to delete a gemset test@jruby-1.6.5
+    rvm gemset delete test@jruby-1.6.5
+
+####How to use JRuby 1.6.5
+    rvm use jruby-1.6.5
