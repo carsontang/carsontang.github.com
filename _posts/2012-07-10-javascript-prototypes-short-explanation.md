@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript Prototype"
+title: "JavaScript Prototypes Short Explanation"
 category: JavaScript 
 tags: [JavaScript]
 ---
