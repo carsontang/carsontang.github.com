@@ -3,7 +3,7 @@ layout: page
 ---
 {% include JB/setup %}
 
-Guides I've written over the past year. Mainly for myself, but I hope they help you out, too.
+Quick guides and cheatsheets that act as a reference for me. Mainly for myself, but I hope they help you out, too.
 
 ### Posts
 
