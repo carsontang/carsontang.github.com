@@ -21,7 +21,10 @@ tags: [mongo, database]
 
 ####Show number of items in the collection "testcoll"
     > db.testcoll.count()
-    
+
+####Drop the collection "testcoll"
+    > db.testcoll.drop()
+
 ###Info
 <ul>
 <li>If no database is selected on startup, the default database is "test".</li>
