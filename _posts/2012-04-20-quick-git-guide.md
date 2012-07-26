@@ -16,6 +16,8 @@ Git is a distributed version control system.
 **git add .** -- adds all files in the current directory to the Git repository
 
 **git commit** -- commits current files to the Git repository
+
+**git commit --amend -m "Whoops. Used a wrong commit message last time."** -- Revise a commit message with a new one.
 <br />
 <br />
 ### Common workflow
