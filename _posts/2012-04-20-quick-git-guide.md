@@ -67,3 +67,7 @@ To start tracking these files, use the **git add** commmand:
      1 files changed, 1 insertions(+), 0 deletions(-)
      create mode 100644 README
 
+###Useful Git commands
+    git log --pretty=oneline --max-count=2
+    git log --pretty=oneline --author="Carson Tang"
+    git log --pretty=oneline --since="5 minutes ago"
