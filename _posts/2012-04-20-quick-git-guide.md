@@ -85,6 +85,15 @@ The following situation involves undoing an accidental commit with **git revert 
 * `HEAD` points to the tip of the current branch you're on.
 
 ###Useful Git commands
-    git log --pretty=oneline --max-count=2
-    git log --pretty=oneline --author="Carson Tang"
-    git log --pretty=oneline --since="5 minutes ago"
+    $ git config credential.helper cache
+    $ git push http://example.com/test.git
+    Username: <type your username>
+    Password: <type your password>
+
+    [work for 5 minutes]
+    git push http://example.com/test.git
+    [your credentials are used automatically]
+
+    $ git log --pretty=oneline --max-count=2
+    $ git log --pretty=oneline --author="Carson Tang"
+    $ git log --pretty=oneline --since="5 minutes ago"
