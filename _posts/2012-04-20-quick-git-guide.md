@@ -67,6 +67,23 @@ To start tracking these files, use the **git add** commmand:
      1 files changed, 1 insertions(+), 0 deletions(-)
      create mode 100644 README
 
+The following situation involves undoing an accidental commit with **git revert HEAD**:
+
+    $ git rm *
+    rm 'README'
+    $ git commit -m "Removed everything"
+    [master 9f31df6] Removed everything
+    0 files changed
+    delete mode 100644 README
+    $ git revert HEAD
+    <add comment to revert>
+    [master 2cca6ca] Revert "Removed everything"
+    0 files changed
+    create mode 100644 README
+
+###Git concepts
+* `HEAD` points to the tip of the current branch you're on.
+
 ###Useful Git commands
     git log --pretty=oneline --max-count=2
     git log --pretty=oneline --author="Carson Tang"
