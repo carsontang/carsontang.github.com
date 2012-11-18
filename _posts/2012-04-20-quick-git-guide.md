@@ -84,7 +84,7 @@ The following situation involves undoing an accidental commit with **git revert 
 ###Git concepts
 * `HEAD` points to the tip of the current branch you're on.
 
-###Useful Git commands
+###Avoid having to type username and password every single git-push
     $ git config credential.helper cache
     $ git push http://example.com/test.git
     Username: <type your username>
@@ -94,6 +94,7 @@ The following situation involves undoing an accidental commit with **git revert 
     git push http://example.com/test.git
     [your credentials are used automatically]
 
+###Useful git-log examples
     $ git log --pretty=oneline --max-count=2
     $ git log --pretty=oneline --author="Carson Tang"
     $ git log --pretty=oneline --since="5 minutes ago"
