@@ -94,6 +94,10 @@ The following situation involves undoing an accidental commit with **git revert 
     git push http://example.com/test.git
     [your credentials are used automatically]
 
+    # default timeout of credential cache is 900 seconds, or 15 minutes
+    # exit credential cache early
+    $ git credential-cache exit
+
 ###Useful git-log examples
     $ git log --pretty=oneline --max-count=2
     $ git log --pretty=oneline --author="Carson Tang"
