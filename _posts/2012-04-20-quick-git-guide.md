@@ -102,3 +102,6 @@ The following situation involves undoing an accidental commit with **git revert 
     $ git log --pretty=oneline --max-count=2
     $ git log --pretty=oneline --author="Carson Tang"
     $ git log --pretty=oneline --since="5 minutes ago"
+
+###Useful Git links
+[git stash commands](http://gitready.com/beginner/2009/01/10/stashing-your-changes.html) 
