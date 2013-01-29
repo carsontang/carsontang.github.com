@@ -41,10 +41,15 @@ location of the Excon gem it was using.
     > $:.grep(/excon/)
     ["/path/to/excon/gem"]
 
-I changed into `/path/to/excon/gem` and modified `excon/ssl_sockets.rb`. Specifically,
+I changed into `/path/to/excon/gem` and modified `excon/ssl_socket.rb`. Specifically,
 I modified the params hash so that the Excon gem could find the CA certificates.
 
-    params[:ssl_ca_path] = '/etc/ssl/certs'
+    # create ssl context
+    ssl_context = OpenSSL::SSL::SSLContext.new
+
+    params[:ssl_ca_path] = '/etc/ssl/certs' # <--- Line I added
+    if params[:ssl_verify_peer]
+    ...
 
 This change allowed CarrierWave to upload pictures to S3 successfully because now my EC2
 instance could verify it was communicating with S3. I also could have modified params
@@ -53,6 +58,3 @@ in a different way:
     params[:ssl_verify_peer] = false
 
 This tells Excon to not verify its peer, which is not secure, so I stuck with my first solution.
-
-
-
