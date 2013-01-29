@@ -28,6 +28,7 @@ separately, which is helpful for busy websites.
 
 ###Useful Links
   [Fantastic Stack Overflow answer explaining how the entire stack works](http://stackoverflow.com/questions/4113299/ruby-on-rails-server-options)
+  
   [Apache Modules](http://en.wikipedia.org/wiki/Apache_modules)
 
   [Common Gateway Interface](http://en.wikipedia.org/wiki/Common_Gateway_Interface)
