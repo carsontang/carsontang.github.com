@@ -52,3 +52,6 @@ tags: [PostgreSQL]
 
 ### Drop a row
     pg=# DELETE FROM users WHERE email = 'bogus@bogus.net';
+
+### Inner join
+    pg=# SELECT users.first_name, users.last_name FROM users INNER JOIN offers ON users.id = offers.user_id;
