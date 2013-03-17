@@ -34,7 +34,7 @@ tags: [PostgreSQL]
     sample_app_development=# \d
 
 ### Create a table
-    pg=# CREATE TABLE countries (
+    pg=# CREATE TABLE cities (
     pg(#   city_code char(2) PRIMARY KEY,
     pg(#   city_name text UNIQUE
     pg(# );
