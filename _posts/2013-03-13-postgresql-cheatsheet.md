@@ -46,3 +46,9 @@ tags: [PostgreSQL]
 ### Insert a row (shorthand)
     pg=# INSERT INTO cities
     pg-# VALUES ('sv', 'Sunnyvale'), ('mv', 'Mountain View');
+
+### Update a row
+    pg=# UPDATE users SET is_approved = true WHERE email = 'me@email.com';
+
+### Drop a row
+    pg=# DELETE FROM users WHERE email = 'bogus@bogus.net';
