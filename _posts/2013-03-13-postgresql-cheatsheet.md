@@ -33,4 +33,16 @@ tags: [PostgreSQL]
 ### List all tables within a database
     sample_app_development=# \d
 
+### Create a table
+    pg=# CREATE TABLE countries (
+    pg(#   city_code char(2) PRIMARY KEY,
+    pg(#   city_name text UNIQUE
+    pg(# );
 
+### Insert a row
+    pg=# INSERT INTO cities (city_code, city_name)
+    pg-# VALUES ('sv', 'Sunnyvale'), ('mv', 'Mountain View');
+
+### Insert a row (shorthand)
+    pg=# INSERT INTO cities
+    pg-# VALUES ('sv', 'Sunnyvale'), ('mv', 'Mountain View');
