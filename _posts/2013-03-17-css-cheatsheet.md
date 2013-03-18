@@ -6,6 +6,13 @@ tags: ["CSS"]
 ---
 {% include JB/setup %}
 
+### Include an internal style sheet
+    <style type="text/css">
+      h1 {
+        background-color: blue;
+      }
+    </style>
+
 ### Link a style sheet
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
