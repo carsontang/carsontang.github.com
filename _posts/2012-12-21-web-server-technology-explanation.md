@@ -88,3 +88,7 @@ puts "<html><body>This is a test</body></html>"
   [FastCGI](http://en.wikipedia.org/wiki/FastCGI)
 
   [Phusion Passenger](http://www.modrails.com/documentation/Users%20guide%20Standalone.html)
+
+  [Serving CGI scripts with Mac OS X](http://reviews.cnet.com/8301-13727_7-57481978-263/how-to-enable-web-sharing-in-os-x-mountain-lion/)
+
+  [Serving Python CGI scripts with Mac OS X](http://www.editrocket.com/articles/python_apache_mac.html)
