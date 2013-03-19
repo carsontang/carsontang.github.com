@@ -28,13 +28,13 @@ tags: [mongo, database]
 ####Create a new Rails app with Mongo
     $ rails new cool_app --skip-active-record
 Add the following to your Gemfile:
-    
-    require 'rubygems'
-    require 'mongo'
-    source 'http://gemcutter.org'
+{% highlight ruby %}require 'rubygems'
+require 'mongo'
+source 'http://gemcutter.org'
 
-    gem "rails", "3.0.0"
-    gem "mongo_mapper"
+gem "rails", "3.0.0"
+gem "mongo_mapper"
+{% endhighlight %}
 
 ####Create a model for Posts with Mongo
     $ rails generate scaffold Post message:string --skip-migration --orm mongo_mapper

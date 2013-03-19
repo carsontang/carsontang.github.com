@@ -49,27 +49,28 @@ visitors can access them.
     $ sudo chmod 644 /etc/apache2/users/*
 
 3) Put an executable Python script in the cgi-bin.
-
     $ cd /Library/WebServer/CGI-Executables
     $ vim script.py
-    #! /usr/bin/python
-    print 'Content-Type: text/html'
-    print
-    print """\
-    <html>
-    <body>
-    <h1>Hello World!</h1>
-    </body>
-    </html>
-    """
+{% highlight python %}#! /usr/bin/python
+
+print 'Content-Type: text/html'
+print
+print """\
+<html>
+<body>
+<h1>Hello World!</h1>
+</body>
+</html>
+"""
+{% endhighlight %}
 
 4) The following is a Ruby CGI script:
-
-    #! /usr/bin/ruby                                                                                             
-    require 'cgi'
-    cgi = CGI.new
-    puts cgi.header
-    puts "<html><body>This is a test</body></html>"
+{% highlight ruby %}#! /usr/bin/ruby                                                                                             
+require 'cgi'
+cgi = CGI.new
+puts cgi.header
+puts "<html><body>This is a test</body></html>"
+{% endhighlight %}
 
 ###Useful Links
 
