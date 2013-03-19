@@ -49,6 +49,7 @@ visitors can access them.
     $ sudo chmod 644 /etc/apache2/users/*
 
 3) Put an executable Python script in the cgi-bin.
+
     $ cd /Library/WebServer/CGI-Executables
     $ vim script.py
 {% highlight python %}#! /usr/bin/python
