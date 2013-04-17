@@ -20,7 +20,7 @@ tags: ["CSS"]
 {% endhighlight %}
 ### div v.s. span
 A div allows you to group several block-level elements. A span lets you apply a class or ID style to part
-of a tag.
+of a tag. Use the semantic tags like <header>, <footer>, <code>, etc. instead of div when you can.
 
 ### Style a group of selectors
 {% highlight css %}
