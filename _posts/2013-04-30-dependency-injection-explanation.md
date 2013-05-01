@@ -10,8 +10,7 @@ tags: [design, testing]
 <br />
 The best definition of dependency injection that I found online is by James Shore:
 
-<q>"Dependency injection means giving an object its instance variables. Really. That's it."</q>
-<br />
+    "Dependency injection means giving an object its instance variables. Really. That's it."
 
 ### Example
 <br />
@@ -48,7 +47,7 @@ class Computer
 end
 {% endhighlight %}
 
-See how simple the change was? All I did was, as James Shore puts it, give an instance
+See how simple the change was? All I did was, as James Shore would put it, give an instance
 of Computer its `@graphics_card` instance variable. Now I can swap out Nvidia graphics
 cards with AMD graphics cards easily.
 
@@ -101,4 +100,5 @@ def test_should_generate_images_when_displaying_images
 end
 {% endhighlight %}
 
+### References
 [Dependency Injection Demystified](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html)
