@@ -80,3 +80,36 @@ class << BasketballPlayer
   end
 end
 {% endhighlight %}
+
+### Special singleton methods: class methods
+As referred to earlier, a class method is a singleton method defined on an object of Class.
+Just a refresher, an object of Class is just a regular Ruby class. Class methods are almost
+the same as singleton methods. However, they have an additional property. Normally, the only
+object that can call the singleton method is the object the singleton method was defined on.
+A class method can be called by the class on which it's defined. It can _also_ be called by
+other objects that fit a special criterion: those objects are subclasses of the class on
+which the singleton method was defined.
+
+{% highlight ruby %}
+class Watch
+  attr_reader :serial_number
+
+  def initialize(sn)
+    @serial_number = sn
+  end
+
+  class << self
+    def valid?(serial_number)
+      serial_number % 2 == 0
+    end
+  end
+end
+
+class Rolex < Watch; end
+
+Rolex.new(2).valid?
+=> true
+{% endhighlight %}
+
+This allowed because singleton classes of class objects are ancestors of singleton classes
+of descending class objects.
