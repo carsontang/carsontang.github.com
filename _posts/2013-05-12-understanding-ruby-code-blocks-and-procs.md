@@ -7,11 +7,11 @@ tags: [ruby]
 {% include JB/setup %}
 
 ### Goal
-The goal of this series of articles is to understand why the following code sums
-numbers 1 through 10.
+The goal of this series of articles is to understand how the following code
+works.
 {% highlight ruby %}
-(1..10).inject(&:+)
-=> 55
+["ruby", "rails"].map(&:upcase)
+=> ["RUBY", "RAILS"]
 {% endhighlight %}
 
 To understand this code, we have to look at code blocks and Procs.
@@ -58,7 +58,7 @@ end
 As you noticed earlier on, code blocks can take arguments. Simply pass the arguments
 to the `yield` keyword, and they'll be passed to the code block. Armed with
 this knowledge, it's not too hard to write our own version of the `each`
-method that classes with the Enumerable module can call.
+method that classes that include the Enumerable module can call.
 
 {% highlight ruby %}
 class Array
@@ -82,7 +82,7 @@ end
 ### What is a Proc?
 A lot of things in Ruby are objects, but code blocks are not. What if you want
 to store a code block somewhere and pass it around from method to method? Well,
-fortunately with Ruby, you can with a Proc object. An instance of Proc is simply
+fortunately with Ruby, you _can_ with a Proc object. An instance of Proc is simply
 an object that represents a code block. You're familiar with code blocks. They
 look like the following:
 {% highlight ruby %}
@@ -98,7 +98,8 @@ code_block_object = Proc.new { "I am a code block. I am also the code block of a
 {% endhighlight %}
 
 In methods, we have the ability to call a code block with the `yield` keyword.
-To call code block stored within a Proc object, use the `call` method on that object.
+How do we call the code block stored within a Proc object then? Simple:
+use the `call` method on that object.
 
 {% highlight ruby %}
 code_block_object.call
@@ -127,4 +128,4 @@ Hello world!
 => nil
 {% endhighlight %}
 
-All right, that might have been a lot to take in, so let's stop for a bit and continue this with part 2 of this article. [Some Link]({% post_url 2013-05-12-understanding-ruby-code-blocks-and-procs-part-2 %})
+All right, that might have been a lot to take in, so let's stop for a bit and continue this with [part 2 of this series]({% post_url 2013-05-12-understanding-ruby-code-blocks-and-procs-part-2 %}).
