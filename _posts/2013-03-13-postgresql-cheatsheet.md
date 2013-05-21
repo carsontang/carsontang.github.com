@@ -89,6 +89,7 @@ pg-# );
 {% endhighlight %}
 ### Tuple Variables/Alias
 loans(loan_id, amount)
+
 Find loans that are greater in amount than some loan in loans.
 {% highlight psql %}
 pg=# SELECT DISTINCT l1.loan_id
