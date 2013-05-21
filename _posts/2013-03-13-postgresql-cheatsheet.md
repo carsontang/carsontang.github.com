@@ -87,3 +87,24 @@ pg-#        WHERE name = 'Palo Alto'
 pg-#    )
 pg-# );
 {% endhighlight %}
+### Tuple Variables/Alias
+loans(loan_id, amount)
+Find loans that are greater in amount than some loan in loans.
+{% highlight psql %}
+pg=# SELECT DISTINCT l1.loan_id
+pg-# FROM loans l1, loans l2
+pg-# WHERE l1.amount > l2.amount
+{% endhighlight %}
+Why is the DISTINCT there? If DISTINCT isn't used, for each pair of tuples
+such that l1.amount > l2.amount, l1.loan_id will appear. For example, let's
+assume the following tuples exist in the table:
+
+    (1, 10.00)
+    (2, 20.43)
+    (3, 31.29)
+
+Without DISTINCT, the second tuple will be returned once, and the third tuple
+will be returned twice. There is one pair such that the second tuple's amount
+is greater than the other tuple's amount. There are two pairs such that the
+third tuple's amount is greater than the other tuple's amount. Using DISTINCT
+removes all the redundant tuples.
