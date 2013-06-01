@@ -77,6 +77,30 @@ Thus, I must specify that I'm linking in math.o.
     unix > ./math_test
     result: 3
 
+### Extra: Relocatable Object File
+To more deeply understand the meaning of "relocatable", look at the difference between the symbol
+tables of a relocatable object file and an executable object file.
+
+    unix > gcc -c main.c
+    unix > readelf --symbols main.o
+    Num:     Value   Size     Type      Bind       Vis     Ndx  Name
+      0:  00000000      0   NOTYPE     LOCAL   DEFAULT     UND
+      1:  00000000      0   FILE       LOCAL   DEFAULT     ABS  main.c
+      2:  00000000      0   OBJECT    GLOBAL   DEFAULT     3    buf
+      3:  00000000      0   OBJECT    GLOBAL   DEFAULT     1    main
+
+    unix > gcc main.c -o main
+    unix > readelf --symbols main
+    Num:     Value   Size     Type      Bind       Vis     Ndx  Name
+     53:  08048460      2     FUNC    GLOBAL   DEFAULT     13   __libc_csu_fini
+     54:  08048462      0     FUNC    GLOBAL   HIDDEN      13   __i686.get_pc_thunk.bx
+     55:  0804a018      4     OBJECT  GLOBAL   DEFAULT     13   bufp0
+
+Above are excerpts of the object files. The relocatable object file has symbols associated
+with the 00000000 address. The executable object file has symbols associated with real addresses.
+After the compiler and assembler generate the relocatable object file, the data start at address 0.
+The linker then _relocates_ these sections by associating each with a location with in memory.
+
 ### What does ELF stand for?
 executable and linkable format
 
