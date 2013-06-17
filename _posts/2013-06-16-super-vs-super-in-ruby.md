@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "super vs super in Ruby"
+title: "super vs super() in Ruby"
 category: Ruby
 tags: [Ruby]
 ---
