@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "super vs super() in Ruby"
+title: "super vs super in Ruby"
 category: Ruby
 tags: [Ruby]
 ---
@@ -14,7 +14,7 @@ class A
   attr_reader :stack
 
   def initialize
-    @stack = []
+    @stack = Array.new
   end
 end
 
