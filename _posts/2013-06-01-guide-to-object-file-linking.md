@@ -101,6 +101,39 @@ with the 00000000 address. The executable object file has symbols associated wit
 After the compiler and assembler generate the relocatable object file, the data start at address 0.
 The linker then _relocates_ these sections by associating each with a location with in memory.
 
+### Executable Object Files
+
+Having seen in detail what a relocatable object file is, it should be no surprise that
+an executable object file is simply a relocatable object file with the addresses
+assigned so that it can be placed into memory for execution. There are a few other details,
+but at a high level, this is the most important.
+
+At the command line, if the program is invoked, a program called the _loader_ copies
+the code and data from the executable into main memory. The loader then runs the program
+by jumping to the instruction at the entry point, which is always at the address
+of the _start symbol.
+
+The code at _start usually runs some initialization code. Then it runs the main routine,
+which is defined in every C program. Finally it runs _exit.
+
+### Shared Object Files
+
+Relocatable object files are linked together during compile time. As stated before,
+once the symbols in the relocatable object files are assigned addresses, those
+cannot be changed unless the compilation process is done again. Another disadvantage
+is the entire object file is linked into the final executable object file.
+
+A modern innovation is the development of shared object files, which are linked into
+programs during runtime. This is also known as dynamic linking.
+
+Each file system only has one of each shared object file. Each program that uses the
+shared object file is using the exact same machine code as well. They are suffixed
+by .so.
+
+### How to create a shared object file
+
+    unix > gcc -shared -fPIC -o libtest.so test.c
+
 ### What does ELF stand for?
 executable and linkable format
 
