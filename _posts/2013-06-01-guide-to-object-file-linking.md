@@ -111,7 +111,7 @@ but at a high level, this is the most important.
 At the command line, if the program is invoked, a program called the _loader_ copies
 the code and data from the executable into main memory. The loader then runs the program
 by jumping to the instruction at the entry point, which is always at the address
-of the _start symbol.
+of the _start_ symbol.
 
 The code at _start usually runs some initialization code. Then it runs the main routine,
 which is defined in every C program. Finally it runs _exit.
